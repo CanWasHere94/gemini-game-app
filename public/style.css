@@ -1,0 +1,161 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+#chat-container {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    background-color: #fafafa;
+}
+
+.user-message, .bot-reply {
+    max-width: 85%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #2563eb;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-reply {
+    background-color: #e5e7eb;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+#message-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #172b5f;
+}
+
+.settings-container {
+    position: relative;
+    display: inline-block;
+    align-self: flex-end;
+}
+
+#settingsBtn {
+    background: none;
+    border: 1px solid #cbd5e1;
+    color: #555;
+    font-size: 1.5em;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#settingsBtn:hover {
+    background-color: #e2e8f0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    padding: 15px;
+    top: 50px; 
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.dropdown-content label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.dropdown-content input[type="radio"] {
+    margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

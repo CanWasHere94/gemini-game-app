@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Chatbot</h1>
+
+        <div class="settings-container">
+            <button id="settingsBtn">⚙️ Settings</button>
+            <div id="settingsDropdown" class="dropdown-content">
+                <p>Choose your LLM:</p>
+                <label>
+                    <input type="radio" name="llmChoice" value="gemini" checked> Gemini
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="llmChoice" value="openai"> Local OpenAI-compatible LLM
+                </label>
+            </div>
+        </div>
+
+        <div id="chat-container">
+            </div>
+
+        <form id="chat-form">
+            <input type="text" id="message-input" placeholder="Type your request here...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
